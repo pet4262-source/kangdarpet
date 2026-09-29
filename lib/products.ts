@@ -1,86 +1,53 @@
-export type Category = {
+export interface Category {
   slug: string
   name: string
 }
 
-
-export type Product = {
+export interface Product {
   name: string
   slug: string
   category: string
-  description?: string
   image?: string
+  description?: string
+
+  material: string
+  size: string
+  moq: string
 }
 
-
 export const categories: Category[] = [
-
   {
     slug: "dog-toys",
     name: "Dog Toys",
   },
-
-  {
-    slug: "dog-training",
-    name: "Dog Training Supplies",
-  },
-
 ]
 
-
-
 export const products: Product[] = [
-
   {
     name: "Durable Dog Bite Toy",
     slug: "durable-dog-bite-toy",
     category: "dog-toys",
-    description:
-      "Professional durable bite toy for working dogs and training.",
-    image:
-      "/products/bite-toy.jpg",
+
+    image: "/images/product1.jpg",
+
+    description: "Heavy duty dog bite toy.",
+
+    material: "Jute + Cotton",
+
+    size: "30cm",
+
+    moq: "100 pcs",
   },
-
-
-  {
-    name: "Dog Training Tug Toy",
-    slug: "dog-training-tug-toy",
-    category: "dog-training",
-    description:
-      "High strength tug toy for K9 training.",
-    image:
-      "/products/tug-toy.jpg",
-  },
-
-
 ]
 
-
-
-export function getCategory(slug:string){
-
-  return categories.find(
-    item=>item.slug===slug
-  )
-
+export function getCategory(slug: string) {
+  return categories.find((c) => c.slug === slug)
 }
 
-
-
-export function getProduct(slug:string){
-
-  return products.find(
-    item=>item.slug===slug
-  )
-
+export function getProduct(slug: string) {
+  return products.find((p) => p.slug === slug)
 }
 
-
-
-export function getProductsByCategory(slug:string){
-
-  return products.filter(
-    item=>item.category===slug
-  )
-
+export function getProductsByCategory(category: string) {
+  return products.filter((p) => p.category === category)
 }
