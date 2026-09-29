@@ -1,36 +1,49 @@
 export const company = {
   name: "KANGDARPET",
   legalName: "Henan Kangdar Pet Products Co., Ltd.",
-  description: "Professional Dog Toy Manufacturer",
+  description:
+    "Professional dog toy and training supplies manufacturer specializing in OEM and ODM services worldwide.",
   established: "2012",
   factoryArea: "4800㎡",
   employees: "50+",
-  markets: [
-    "USA",
-    "Canada",
-    "Europe",
-    "Australia",
-    "Japan",
-  ],
+  markets: "30+ countries",
   certifications: [
-    "ISO9001",
-    "BSCI",
+    "Quality Control",
+    "OEM Manufacturing",
+    "Global Export",
   ],
 }
+
 
 export const contactInfo = {
   email: "sales@kangdarpet.com",
-  phone: "+86 13800000000",
-  whatsapp: "+8613800000000",
-  whatsappLink: "https://wa.me/8613800000000",
-  address: "Henan, China",
+  phone: "+86 000 0000 0000",
+  whatsapp: "+86 000 0000 0000",
+  whatsappLink: "https://wa.me/860000000000",
+  address:
+    "Henan, China",
 }
 
+
 export const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Factory", href: "#factory" },
-  { label: "OEM & ODM", href: "#oem-odm" },
-  { label: "Contact", href: "#contact" },
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Products",
+    href: "/products",
+  },
+  {
+    label: "Factory",
+    href: "#factory",
+  },
+  {
+    label: "OEM & ODM",
+    href: "#oem-odm",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+  },
 ]
