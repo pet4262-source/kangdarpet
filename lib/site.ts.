@@ -1,0 +1,7 @@
+export const company = {
+  name: "KANGDARPET",
+  certifications: [
+    "BSCI",
+    "ISO9001"
+  ],
+}
