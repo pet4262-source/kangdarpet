@@ -4,7 +4,7 @@
 import Link from "next/link"
 
 
-export default function AdminHome(){
+export default function AdminHome() {
 
 
 return (
