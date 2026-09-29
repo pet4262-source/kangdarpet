@@ -13,7 +13,6 @@ export type Product = {
 }
 
 
-
 export const categories: Category[] = [
 
   {
@@ -22,13 +21,8 @@ export const categories: Category[] = [
   },
 
   {
-    slug: "training-equipment",
-    name: "Dog Training Equipment",
-  },
-
-  {
-    slug: "bite-toys",
-    name: "Bite Toys",
+    slug: "dog-training",
+    name: "Dog Training Supplies",
   },
 
 ]
@@ -40,20 +34,20 @@ export const products: Product[] = [
   {
     name: "Durable Dog Bite Toy",
     slug: "durable-dog-bite-toy",
-    category: "bite-toys",
+    category: "dog-toys",
     description:
-      "Professional dog bite toy for K9 training and working dogs.",
+      "Professional durable bite toy for working dogs and training.",
     image:
       "/products/bite-toy.jpg",
   },
 
 
   {
-    name: "Interactive Dog Tug Toy",
-    slug: "interactive-dog-tug-toy",
-    category: "dog-toys",
+    name: "Dog Training Tug Toy",
+    slug: "dog-training-tug-toy",
+    category: "dog-training",
     description:
-      "Strong tug toy for professional dog trainers.",
+      "High strength tug toy for K9 training.",
     image:
       "/products/tug-toy.jpg",
   },
@@ -63,50 +57,30 @@ export const products: Product[] = [
 
 
 
+export function getCategory(slug:string){
 
-
-// 根据分类slug获取产品
-
-export function getProductsByCategory(
-  slug:string
-){
-
- return products.filter(
-   (product)=>
-   product.category===slug
- )
+  return categories.find(
+    item=>item.slug===slug
+  )
 
 }
 
 
 
+export function getProduct(slug:string){
 
-// 根据slug获取分类
-
-export function getCategory(
- slug:string
-){
-
- return categories.find(
-   (category)=>
-   category.slug===slug
- )
+  return products.find(
+    item=>item.slug===slug
+  )
 
 }
 
 
 
+export function getProductsByCategory(slug:string){
 
-
-// 根据slug获取产品
-
-export function getProduct(
- slug:string
-){
-
- return products.find(
-   (product)=>
-   product.slug===slug
- )
+  return products.filter(
+    item=>item.category===slug
+  )
 
 }
