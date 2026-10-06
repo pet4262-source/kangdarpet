@@ -46,7 +46,7 @@ The preview route declaration is `public/manus-routes.json`.
 
 1. Sign in at `/admin/login` and open **Homepage CMS** (`/admin/homepage`).
 2. Choose **Hero 主视觉** for the main banner, **产品分类与媒体** for category covers or extra images, or the **OEM & ODM**, **工厂数据**, or **关于我们** section for those pictures.
-3. Select a JPEG, PNG, WebP or AVIF file under 6 MB with the adjacent **从电脑上传** control. The uploaded image URL and preview appear in the editor; the public homepage has **not** changed yet.
+3. Select a JPEG, PNG, WebP or AVIF file under 6 MB with the adjacent **从电脑上传** control. The image is immediately stored at a publicly accessible URL and previewed in the editor, but the public homepage still shows its previous image. Upload **only** images intended to be public; do not upload confidential material.
 4. Click **保存首页** to publish the new image, then use **查看首页** to confirm. Uploading a file without saving the homepage leaves the current public image untouched.
 
 ## Operations / migration notes
@@ -66,4 +66,4 @@ The preview route declaration is `public/manus-routes.json`.
 - Inquiry encryption is AES-256-GCM using only `INQUIRY_ENCRYPTION_KEY`, never `ADMIN_PASSWORD`; the encrypted envelope carries an encryption version and key ID. The independent key is mandatory for inquiry persistence and administrative reads.
 - Public catalog API sends only published products.
 - Inquiry API does not return inquiries or administrator details.
-- Uploaded media is public product/homepage imagery by design. Do not upload buyer files, contracts, or secrets.
+- Uploaded media is public product/homepage imagery by design. The Blob URL is accessible immediately after upload, even if the CMS form is never saved; saving controls when the image is referenced on the homepage. Do not upload buyer files, contracts, or secrets.

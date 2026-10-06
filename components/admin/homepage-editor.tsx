@@ -38,7 +38,7 @@ function replaceAt<T>(items: T[], index: number, item: T) {
   return items.map((current, currentIndex) => currentIndex === index ? item : current)
 }
 
-function HomepageImageUploadButton({ disabled, onUploaded, onUploadStateChange, label = '从电脑上传', successMessage = '图片上传成功，已更新当前表单；请点击“保存首页”后发布。' }: { disabled: boolean; onUploaded: (url: string) => void; onUploadStateChange: (uploading: boolean) => void; label?: string; successMessage?: string }) {
+function HomepageImageUploadButton({ disabled, onUploaded, onUploadStateChange, label = '从电脑上传', successMessage = '图片已上传并生成公开链接；点击“保存首页”后才会出现在首页。' }: { disabled: boolean; onUploaded: (url: string) => void; onUploadStateChange: (uploading: boolean) => void; label?: string; successMessage?: string }) {
   const [uploading, setUploading] = useState(false)
   const [message, setMessage] = useState('')
   const [error, setError] = useState(false)
