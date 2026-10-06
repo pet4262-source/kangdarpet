@@ -1,35 +1,20 @@
 import { Mail, MapPin, MessageCircle } from 'lucide-react'
-import { contactInfo } from '@/lib/site'
 import { SectionHeading } from './section-heading'
+import type { HomepageContact } from '@/lib/homepage-types'
 
-const items = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: contactInfo.email,
-    href: `mailto:${contactInfo.email}`,
-  },
-  {
-    icon: MessageCircle,
-    label: 'WhatsApp',
-    value: contactInfo.whatsapp,
-    href: contactInfo.whatsappLink,
-  },
-  {
-    icon: MapPin,
-    label: 'Address',
-    value: contactInfo.address,
-  },
-]
-
-export function ContactSection() {
+export function ContactSection({ content }: { content: HomepageContact }) {
+  const items = [
+    { icon: Mail, label: 'Email', value: content.email, href: `mailto:${content.email}` },
+    { icon: MessageCircle, label: 'WhatsApp', value: content.whatsapp, href: content.whatsappLink },
+    { icon: MapPin, label: 'Address', value: content.address },
+  ]
   return (
     <section id="contact" className="bg-secondary py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
-          eyebrow="Contact Us"
-          title="Contact KANGDARPET"
-          description="Contact us for OEM & ODM dog toy manufacturing. We will reply within 24 hours with professional solutions and a competitive quotation."
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">

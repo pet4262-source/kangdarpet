@@ -14,17 +14,6 @@ export const company = {
   ],
 }
 
-
-export const contactInfo = {
-  email: "sales@kangdarpet.com",
-  phone: "+86 000 0000 0000",
-  whatsapp: "+86 000 0000 0000",
-  whatsappLink: "https://wa.me/860000000000",
-  address:
-    "Henan, China",
-}
-
-
 export const navLinks = [
   {
     label: "Home",
@@ -36,14 +25,14 @@ export const navLinks = [
   },
   {
     label: "Factory",
-    href: "#factory",
+    href: "/#factory",
   },
   {
     label: "OEM & ODM",
-    href: "#oem-odm",
+    href: "/#oem-odm",
   },
   {
     label: "Contact",
-    href: "#contact",
+    href: "/#contact",
   },
 ]

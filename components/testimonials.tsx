@@ -1,35 +1,15 @@
 import { Star } from 'lucide-react'
 import { SectionHeading } from './section-heading'
+import type { HomepageTestimonials } from '@/lib/homepage-types'
 
-const testimonials = [
-  {
-    quote:
-      'KANGDARPET developed our entire plush line from scratch. Quality is consistent across every shipment and communication is always fast.',
-    name: 'Emily Carter',
-    role: 'Product Manager, PawNest — USA',
-  },
-  {
-    quote:
-      'Their rubber chew toys passed all our EU safety tests on the first try. The small MOQ helped us launch new designs with low risk.',
-    name: 'Lukas Weber',
-    role: 'Founder, Hundewelt — Germany',
-  },
-  {
-    quote:
-      'Great packaging design support and on-time delivery. We have worked together for six years and keep expanding our range.',
-    name: 'Sophie Martin',
-    role: 'Buyer, Chien & Co — France',
-  },
-]
-
-export function Testimonials() {
+export function Testimonials({ content }: { content: HomepageTestimonials }) {
   return (
     <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-      <SectionHeading eyebrow="Testimonials" title="What our global clients say" />
+      <SectionHeading eyebrow={content.eyebrow} title={content.title} />
       <div className="mt-14 grid gap-6 md:grid-cols-3">
-        {testimonials.map((t) => (
+        {content.items.map((t, index) => (
           <figure
-            key={t.name}
+            key={`${t.name}-${index}`}
             className="flex flex-col rounded-3xl bg-secondary p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
           >
             <div className="flex gap-1 text-primary" aria-label="5 out of 5 stars">

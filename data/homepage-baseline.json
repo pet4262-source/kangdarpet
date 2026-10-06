@@ -1,0 +1,920 @@
+{
+  "hero": {
+    "eyebrow": "Since 2012 · Exporting to Europe, the Americas & Central Asia",
+    "title": "Premium Dog Toys Manufacturer in China",
+    "subtitle": "OEM & ODM Dog Toy Solutions for Global Brands",
+    "primaryCta": "View Products",
+    "secondaryCta": "Contact Us",
+    "image": "/images/hero.png"
+  },
+  "why": {
+    "eyebrow": "Why Choose Us",
+    "title": "Your reliable dog toy manufacturing partner",
+    "description": "We combine factory scale with brand-level craftsmanship to help pet businesses grow.",
+    "items": [
+      {
+        "title": "Factory Direct",
+        "text": "Buy straight from our own production lines with competitive pricing and no middlemen."
+      },
+      {
+        "title": "Premium Quality",
+        "text": "Pet-safe, non-toxic materials compliant with CE and EU standards."
+      },
+      {
+        "title": "Fast Delivery",
+        "text": "Samples in 7 days and bulk orders shipped in 25–35 days worldwide."
+      },
+      {
+        "title": "Custom Design",
+        "text": "In-house design team turns your ideas into market-ready dog toys."
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Product Categories",
+    "title": "Dog toys for every breed and play style",
+    "description": "Explore our core product lines, all available for wholesale, private label and custom development.",
+    "items": [
+      {
+        "slug": "plush",
+        "name": "Plush Toys",
+        "text": "Soft, squeaky companions with reinforced stitching.",
+        "image": "/images/plush.png",
+        "images": [
+          "/images/plush.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber",
+        "name": "Rubber Toys",
+        "text": "Natural rubber chews that bounce and last.",
+        "image": "/images/rubber.png",
+        "images": [
+          "/images/rubber.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope",
+        "name": "Rope Toys",
+        "text": "Braided cotton ropes for tug and dental care.",
+        "image": "/images/rope.png",
+        "images": [
+          "/images/rope.png",
+          "https://kboh4fqiuep7wd6y.public.blob.vercel-storage.com/media/category-rope/1790757709001-ae3b79c9-7981-4289-bd1f-f25bb82ed015-nyzS0473Plx1ydxzliCjGcNDtAc5k1.avif",
+          "https://kboh4fqiuep7wd6y.public.blob.vercel-storage.com/media/category-rope/1790757716798-1691199128309-ef0070dab1f441c4aef353f6e4f77284-goods-7kQ8NFtzkDGL2S8uBwZMrsoTlg7BcQ.avif"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive",
+        "name": "Interactive Toys",
+        "text": "Puzzles and treat dispensers for smart play.",
+        "image": "/images/interactive.png",
+        "images": [
+          "/images/interactive.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy",
+        "name": "Puppy Toys",
+        "text": "Gentle teething toys designed for young pups.",
+        "image": "/images/puppy.png",
+        "images": [
+          "/images/puppy.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew",
+        "name": "Tough Chew Toys",
+        "text": "Heavy-duty toys built for power chewers.",
+        "image": "/images/tough.png",
+        "images": [
+          "/images/tough.png"
+        ],
+        "video": ""
+      }
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "slug": "plush-squeaky-plush-bear",
+        "name": "Squeaky Plush Bear",
+        "category": "plush",
+        "sku": "KDP-0001",
+        "description": "Classic teddy with built-in squeaker and reinforced seams.",
+        "moq": 500,
+        "material": "Short plush, PP cotton",
+        "size": "25 cm",
+        "attributes": [],
+        "images": [
+          "/images/plush.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-fox-squeaker-toy",
+        "name": "Fox Squeaker Toy",
+        "category": "plush",
+        "sku": "KDP-0002",
+        "description": "Bright fox plush with crinkle ears and dual squeakers.",
+        "moq": 500,
+        "material": "Velboa, PP cotton",
+        "size": "30 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/plush-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-crinkle-dino-flat-toy",
+        "name": "Crinkle Dino Flat Toy",
+        "category": "plush",
+        "sku": "KDP-0003",
+        "description": "Stuffing-free flat dinosaur with crinkle paper body.",
+        "moq": 800,
+        "material": "Polyester, crinkle film",
+        "size": "35 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/plush-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-plush-duck-toy",
+        "name": "Plush Duck Toy",
+        "category": "plush",
+        "sku": "KDP-0004",
+        "description": "Soft duck with a durable inner lining for gentle chewers.",
+        "moq": 500,
+        "material": "Plush, oxford lining",
+        "size": "22 cm",
+        "attributes": [],
+        "images": [
+          "/images/plush.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-long-snake-plush",
+        "name": "Long Snake Plush",
+        "category": "plush",
+        "sku": "KDP-0005",
+        "description": "Extra-long body with multiple squeakers for tug play.",
+        "moq": 600,
+        "material": "Plush, PP cotton",
+        "size": "60 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/plush-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-plush-hedgehog-toy",
+        "name": "Plush Hedgehog Toy",
+        "category": "plush",
+        "sku": "KDP-0006",
+        "description": "Textured hedgehog with a grunting sound module.",
+        "moq": 500,
+        "material": "Corduroy, PP cotton",
+        "size": "18 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/plush-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-plush-monkey-toy",
+        "name": "Plush Monkey Toy",
+        "category": "plush",
+        "sku": "KDP-0007",
+        "description": "Long-limbed monkey ideal for fetch and shaking.",
+        "moq": 500,
+        "material": "Plush, PP cotton",
+        "size": "32 cm",
+        "attributes": [],
+        "images": [
+          "/images/plush.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "plush-holiday-plush-set",
+        "name": "Holiday Plush Set",
+        "category": "plush",
+        "sku": "KDP-0008",
+        "description": "Seasonal 3-piece plush set, fully customizable designs.",
+        "moq": 1000,
+        "material": "Plush, PP cotton",
+        "size": "15–20 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/plush-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-double-knot-rope",
+        "name": "Double Knot Rope",
+        "category": "rope",
+        "sku": "KDP-0009",
+        "description": "Thick braided rope with two knots for tug-of-war.",
+        "moq": 500,
+        "material": "100% cotton",
+        "size": "35 cm",
+        "attributes": [],
+        "images": [
+          "/images/rope.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-tug-rope-with-handle",
+        "name": "Tug Rope with Handle",
+        "category": "rope",
+        "sku": "KDP-0010",
+        "description": "Handle loop design for comfortable interactive tugging.",
+        "moq": 500,
+        "material": "Cotton blend",
+        "size": "45 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rope-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-woven-rope-ball",
+        "name": "Woven Rope Ball",
+        "category": "rope",
+        "sku": "KDP-0011",
+        "description": "Tightly woven sphere that cleans teeth during chewing.",
+        "moq": 800,
+        "material": "100% cotton",
+        "size": "Ø 7 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rope-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-rope-ring-toy",
+        "name": "Rope Ring Toy",
+        "category": "rope",
+        "sku": "KDP-0012",
+        "description": "Circular braided ring for fetch and two-dog tug.",
+        "moq": 600,
+        "material": "Cotton blend",
+        "size": "Ø 15 cm",
+        "attributes": [],
+        "images": [
+          "/images/rope.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-tennis-ball-rope",
+        "name": "Tennis Ball Rope",
+        "category": "rope",
+        "sku": "KDP-0013",
+        "description": "Rope with a tennis ball for long-distance throwing.",
+        "moq": 500,
+        "material": "Cotton, rubber, felt",
+        "size": "40 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rope-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-dental-floss-rope-bone",
+        "name": "Dental Floss Rope Bone",
+        "category": "rope",
+        "sku": "KDP-0014",
+        "description": "Bone-shaped rope that massages gums and teeth.",
+        "moq": 800,
+        "material": "100% cotton",
+        "size": "25 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rope-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-multi-knot-rope-set",
+        "name": "Multi-Knot Rope Set",
+        "category": "rope",
+        "sku": "KDP-0015",
+        "description": "5-piece assorted rope set for retail packaging.",
+        "moq": 300,
+        "material": "Cotton blend",
+        "size": "Assorted",
+        "attributes": [],
+        "images": [
+          "/images/rope.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rope-heavy-duty-rope-tug",
+        "name": "Heavy-Duty Rope Tug",
+        "category": "rope",
+        "sku": "KDP-0016",
+        "description": "Extra-thick rope for large breeds and strong pullers.",
+        "moq": 500,
+        "material": "100% cotton",
+        "size": "60 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rope-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-rubber-bone-toy",
+        "name": "Rubber Bone Toy",
+        "category": "rubber",
+        "sku": "KDP-0017",
+        "description": "Bouncy natural rubber bone with a textured grip.",
+        "moq": 1000,
+        "material": "Natural rubber",
+        "size": "15 cm",
+        "attributes": [],
+        "images": [
+          "/images/rubber.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-spiky-rubber-ball",
+        "name": "Spiky Rubber Ball",
+        "category": "rubber",
+        "sku": "KDP-0018",
+        "description": "Nubbed surface massages gums with every bite.",
+        "moq": 1000,
+        "material": "Natural rubber",
+        "size": "Ø 6.5 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rubber-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-rubber-donut-ring",
+        "name": "Rubber Donut Ring",
+        "category": "rubber",
+        "sku": "KDP-0019",
+        "description": "Squeaky ring toy that floats for water play.",
+        "moq": 800,
+        "material": "Natural rubber",
+        "size": "Ø 12 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rubber-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-squeaky-rubber-chicken",
+        "name": "Squeaky Rubber Chicken",
+        "category": "rubber",
+        "sku": "KDP-0020",
+        "description": "Classic squeaky chicken with a loud, fun sound.",
+        "moq": 1000,
+        "material": "Latex",
+        "size": "20 cm",
+        "attributes": [],
+        "images": [
+          "/images/rubber.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-rubber-stick-fetch-toy",
+        "name": "Rubber Stick Fetch Toy",
+        "category": "rubber",
+        "sku": "KDP-0021",
+        "description": "Lightweight stick for fetch that won’t splinter.",
+        "moq": 800,
+        "material": "Natural rubber",
+        "size": "28 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rubber-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-rubber-tire-chew",
+        "name": "Rubber Tire Chew",
+        "category": "rubber",
+        "sku": "KDP-0022",
+        "description": "Tire-shaped chew with deep treads for dental care.",
+        "moq": 800,
+        "material": "Natural rubber",
+        "size": "Ø 10 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rubber-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-bouncy-rubber-football",
+        "name": "Bouncy Rubber Football",
+        "category": "rubber",
+        "sku": "KDP-0023",
+        "description": "Unpredictable bounce keeps dogs chasing longer.",
+        "moq": 1000,
+        "material": "Natural rubber",
+        "size": "12 cm",
+        "attributes": [],
+        "images": [
+          "/images/rubber.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "rubber-glow-rubber-ball",
+        "name": "Glow Rubber Ball",
+        "category": "rubber",
+        "sku": "KDP-0024",
+        "description": "Glow-in-the-dark ball for evening play sessions.",
+        "moq": 1000,
+        "material": "Natural rubber",
+        "size": "Ø 6 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/rubber-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-tough-chew-ring",
+        "name": "Tough Chew Ring",
+        "category": "chew",
+        "sku": "KDP-0025",
+        "description": "Ultra-durable ring for aggressive chewers.",
+        "moq": 800,
+        "material": "TPR",
+        "size": "Ø 11 cm",
+        "attributes": [],
+        "images": [
+          "/images/tough.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-nylon-dental-bone",
+        "name": "Nylon Dental Bone",
+        "category": "chew",
+        "sku": "KDP-0026",
+        "description": "Ridged nylon bone that helps reduce plaque.",
+        "moq": 1000,
+        "material": "Food-grade nylon",
+        "size": "16 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/chew-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-branch-chew-stick",
+        "name": "Branch Chew Stick",
+        "category": "chew",
+        "sku": "KDP-0027",
+        "description": "Natural-look branch chew, a safe wood alternative.",
+        "moq": 800,
+        "material": "TPR",
+        "size": "22 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/chew-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-flavored-chew-bone",
+        "name": "Flavored Chew Bone",
+        "category": "chew",
+        "sku": "KDP-0028",
+        "description": "Infused beef flavor encourages healthy chewing.",
+        "moq": 1000,
+        "material": "Nylon",
+        "size": "14 cm",
+        "attributes": [],
+        "images": [
+          "/images/tough.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-wishbone-chew-toy",
+        "name": "Wishbone Chew Toy",
+        "category": "chew",
+        "sku": "KDP-0029",
+        "description": "Easy-grip wishbone shape for paws-up chewing.",
+        "moq": 800,
+        "material": "Nylon",
+        "size": "15 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/chew-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-antler-style-chew",
+        "name": "Antler-Style Chew",
+        "category": "chew",
+        "sku": "KDP-0030",
+        "description": "Antler shape with long-lasting chew resistance.",
+        "moq": 800,
+        "material": "Nylon, TPR",
+        "size": "18 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/chew-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-tri-arm-chew-toy",
+        "name": "Tri-Arm Chew Toy",
+        "category": "chew",
+        "sku": "KDP-0031",
+        "description": "Three-arm design that’s easy to pick up and hold.",
+        "moq": 800,
+        "material": "TPR",
+        "size": "13 cm",
+        "attributes": [],
+        "images": [
+          "/images/tough.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "chew-power-chewer-dumbbell",
+        "name": "Power Chewer Dumbbell",
+        "category": "chew",
+        "sku": "KDP-0032",
+        "description": "Solid dumbbell shape for extreme chew strength.",
+        "moq": 600,
+        "material": "Natural rubber",
+        "size": "17 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/chew-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-treat-dispenser-ball",
+        "name": "Treat Dispenser Ball",
+        "category": "interactive",
+        "sku": "KDP-0033",
+        "description": "Adjustable openings release kibble during play.",
+        "moq": 800,
+        "material": "ABS, TPR",
+        "size": "Ø 8 cm",
+        "attributes": [],
+        "images": [
+          "/images/interactive.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-puzzle-feeder-board",
+        "name": "Puzzle Feeder Board",
+        "category": "interactive",
+        "sku": "KDP-0034",
+        "description": "Sliding compartments hide treats for brain training.",
+        "moq": 500,
+        "material": "ABS",
+        "size": "Ø 25 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/interactive-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-wobble-treat-egg",
+        "name": "Wobble Treat Egg",
+        "category": "interactive",
+        "sku": "KDP-0035",
+        "description": "Weighted base wobbles and drops treats randomly.",
+        "moq": 600,
+        "material": "PP, ABS",
+        "size": "15 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/interactive-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-snuffle-mat",
+        "name": "Snuffle Mat",
+        "category": "interactive",
+        "sku": "KDP-0036",
+        "description": "Fleece foraging mat that encourages natural sniffing.",
+        "moq": 500,
+        "material": "Polar fleece, oxford",
+        "size": "45 × 45 cm",
+        "attributes": [],
+        "images": [
+          "/images/interactive.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-hide-and-seek-plush",
+        "name": "Hide-and-Seek Plush",
+        "category": "interactive",
+        "sku": "KDP-0037",
+        "description": "Plush tree trunk with removable squeaky squirrels.",
+        "moq": 500,
+        "material": "Plush, PP cotton",
+        "size": "20 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/interactive-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-slow-feeder-bowl",
+        "name": "Slow Feeder Bowl",
+        "category": "interactive",
+        "sku": "KDP-0038",
+        "description": "Maze pattern slows eating and reduces bloating.",
+        "moq": 800,
+        "material": "Food-grade PP",
+        "size": "Ø 20 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/interactive-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-automatic-ball-launcher-ball",
+        "name": "Automatic Ball Launcher Ball",
+        "category": "interactive",
+        "sku": "KDP-0039",
+        "description": "Replacement balls compatible with common launchers.",
+        "moq": 1000,
+        "material": "Rubber, felt",
+        "size": "Ø 5 cm",
+        "attributes": [],
+        "images": [
+          "/images/interactive.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "interactive-lick-mat",
+        "name": "Lick Mat",
+        "category": "interactive",
+        "sku": "KDP-0040",
+        "description": "Textured suction lick mat for calm, focused play.",
+        "moq": 1000,
+        "material": "Food-grade silicone",
+        "size": "20 × 20 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/interactive-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-puppy-teething-bone",
+        "name": "Puppy Teething Bone",
+        "category": "puppy",
+        "sku": "KDP-0041",
+        "description": "Soft-textured bone that soothes sore gums.",
+        "moq": 800,
+        "material": "Soft TPR",
+        "size": "11 cm",
+        "attributes": [],
+        "images": [
+          "/images/puppy.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-puppy-teething-ring",
+        "name": "Puppy Teething Ring",
+        "category": "puppy",
+        "sku": "KDP-0042",
+        "description": "Freezable ring for cooling teething relief.",
+        "moq": 800,
+        "material": "Soft rubber",
+        "size": "Ø 9 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/puppy-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-sleepy-lamb-plush",
+        "name": "Sleepy Lamb Plush",
+        "category": "puppy",
+        "sku": "KDP-0043",
+        "description": "Cuddly fleece lamb with a gentle squeaker.",
+        "moq": 500,
+        "material": "Fleece, PP cotton",
+        "size": "18 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/puppy-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-mini-rope-set",
+        "name": "Mini Rope Set",
+        "category": "puppy",
+        "sku": "KDP-0044",
+        "description": "Small, lightweight ropes sized for tiny mouths.",
+        "moq": 500,
+        "material": "100% cotton",
+        "size": "15–20 cm",
+        "attributes": [],
+        "images": [
+          "/images/puppy.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-heartbeat-comfort-toy",
+        "name": "Heartbeat Comfort Toy",
+        "category": "puppy",
+        "sku": "KDP-0045",
+        "description": "Plush with a heartbeat module to ease anxiety.",
+        "moq": 300,
+        "material": "Plush, electronic module",
+        "size": "22 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/puppy-2.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-mini-squeaky-balls",
+        "name": "Mini Squeaky Balls",
+        "category": "puppy",
+        "sku": "KDP-0046",
+        "description": "6-pack of soft balls for small breeds and puppies.",
+        "moq": 500,
+        "material": "Latex",
+        "size": "Ø 4 cm",
+        "attributes": [],
+        "images": [
+          "/images/products/puppy-3.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-puppy-crinkle-blanket",
+        "name": "Puppy Crinkle Blanket",
+        "category": "puppy",
+        "sku": "KDP-0047",
+        "description": "Crinkle blanket toy with taggies for comfort.",
+        "moq": 500,
+        "material": "Minky, crinkle film",
+        "size": "30 × 30 cm",
+        "attributes": [],
+        "images": [
+          "/images/puppy.png"
+        ],
+        "video": ""
+      },
+      {
+        "slug": "puppy-puppy-starter-kit",
+        "name": "Puppy Starter Kit",
+        "category": "puppy",
+        "sku": "KDP-0048",
+        "description": "4-piece gift set for pet stores and subscription boxes.",
+        "moq": 300,
+        "material": "Mixed",
+        "size": "Assorted",
+        "attributes": [],
+        "images": [
+          "/images/products/puppy-2.png"
+        ],
+        "video": ""
+      }
+    ]
+  },
+  "oem": {
+    "eyebrow": "OEM & ODM",
+    "title": "Build your own dog toy brand with us",
+    "description": "Whether you have a finished design or just an idea, our team handles development, sampling, production and packaging under your brand.",
+    "image": "/images/oem.png",
+    "statValue": "2,000+",
+    "statLabel": "Custom designs developed",
+    "cta": "Start Your Project",
+    "services": [
+      {
+        "title": "Custom Logo",
+        "text": "Embroidered, printed or molded logos on every toy."
+      },
+      {
+        "title": "Custom Packaging",
+        "text": "Retail-ready boxes, header cards and hang tags."
+      },
+      {
+        "title": "Custom Design",
+        "text": "From sketch to 3D sample, built around your brand."
+      },
+      {
+        "title": "Small MOQ",
+        "text": "Start from 500 pcs per design to test new markets."
+      }
+    ]
+  },
+  "factory": {
+    "eyebrow": "Our Factory",
+    "title": "Manufacturing strength you can rely on",
+    "description": "Modern production lines, strict quality control and an experienced team deliver consistent quality at scale.",
+    "image": "/images/factory.png",
+    "stats": [
+      {
+        "value": "98",
+        "label": "Employees"
+      },
+      {
+        "value": "4800㎡",
+        "label": "Factory"
+      },
+      {
+        "value": "2012",
+        "label": "Established"
+      },
+      {
+        "value": "Global",
+        "label": "Export"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Henan Kangdar Pet Supplies Co., Ltd.",
+    "description": "Founded in 2012, Henan Kangdar Pet Supplies Co., Ltd. is the manufacturer behind the KANGDARPET brand. We design and produce plush, rubber, rope and interactive dog toys, offering OEM & ODM services for pet brands, wholesalers and retailers across Europe, North America, South America and Central Asia.",
+    "image": "/images/oem.png",
+    "cta": "Work With Us",
+    "highlights": [
+      "Established in 2012 in Nanyang, Henan, China",
+      "4800㎡ factory with 98 skilled employees",
+      "Products certified to CE and EU Standard requirements",
+      "Exporting to Europe, North America, South America and Central Asia"
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What our global clients say",
+    "items": [
+      {
+        "quote": "KANGDARPET developed our entire plush line from scratch. Quality is consistent across every shipment and communication is always fast.",
+        "name": "Emily Carter",
+        "role": "Product Manager, PawNest — USA"
+      },
+      {
+        "quote": "Their rubber chew toys passed all our EU safety tests on the first try. The small MOQ helped us launch new designs with low risk.",
+        "name": "Lukas Weber",
+        "role": "Founder, Hundewelt — Germany"
+      },
+      {
+        "quote": "Great packaging design support and on-time delivery. We have worked together for six years and keep expanding our range.",
+        "name": "Sophie Martin",
+        "role": "Buyer, Chien & Co — France"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact Us",
+    "title": "Let's create your next best-selling dog toy",
+    "description": "Send us your requirements and our sales team will reply within 24 hours with a quotation.",
+    "email": "andyskangdarpet@gmail.com",
+    "whatsapp": "+86 156 7066 6633",
+    "whatsappLink": "https://wa.me/8615670666633",
+    "address": "Room 303, Building B, Xiangcaiwang Mall, Bailixi North Road, Bailixi Street, High-tech Zone, Nanyang, Henan, China"
+  }
+}
