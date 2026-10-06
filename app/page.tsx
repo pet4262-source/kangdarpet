@@ -39,7 +39,7 @@ export default async function Home() {
         <Testimonials content={content.testimonials} />
         <ContactSection content={content.contact} />
       </main>
-      <SiteFooter />
+      <SiteFooter contact={content.contact} />
     </>
   )
 }

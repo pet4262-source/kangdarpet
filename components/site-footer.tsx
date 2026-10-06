@@ -1,7 +1,11 @@
 import { PawPrint } from 'lucide-react'
-import { company, contactInfo, navLinks } from '@/lib/site'
+import { company, navLinks } from '@/lib/site'
+import { readHomepageContent, type HomepageContent } from '@/lib/homepage'
 
-export function SiteFooter() {
+type Contact = HomepageContent['contact']
+
+export async function SiteFooter({ contact }: { contact?: Contact } = {}) {
+  const details = contact ?? (await readHomepageContent()).contact
   return (
     <footer className="bg-navy text-white/75">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-3 lg:px-8">
@@ -36,16 +40,16 @@ export function SiteFooter() {
           <h2 className="font-heading font-bold text-white">Company Info</h2>
           <ul className="mt-5 flex flex-col gap-3">
             <li>
-              <a href={`mailto:${contactInfo.email}`} className="transition-colors hover:text-white">
-                {contactInfo.email}
+              <a href={`mailto:${details.email}`} className="transition-colors hover:text-white">
+                {details.email}
               </a>
             </li>
             <li>
-              <a href={contactInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
-                WhatsApp: {contactInfo.whatsapp}
+              <a href={details.whatsappLink} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
+                WhatsApp: {details.whatsapp}
               </a>
             </li>
-            <li>{contactInfo.address}</li>
+            <li>{details.address}</li>
           </ul>
         </div>
       </div>
