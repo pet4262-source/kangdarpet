@@ -1,31 +1,10 @@
-import Image from 'next/image'
 import { Boxes, Package, PenTool, Tag } from 'lucide-react'
 import { SectionHeading } from './section-heading'
+import type { HomepageOem } from '@/lib/homepage-types'
 
-const services = [
-  {
-    icon: Tag,
-    title: 'Custom Logo',
-    text: 'Custom logo printing, embroidery and woven labels for your brand.',
-  },
-  {
-    icon: Package,
-    title: 'Custom Packaging',
-    text: 'Customized packaging including hang tags, color boxes and display cartons.',
-  },
-  {
-    icon: PenTool,
-    title: 'OEM & ODM Development',
-    text: 'From concept design and sampling to mass production.',
-  },
-  {
-    icon: Boxes,
-    title: 'Flexible MOQ',
-    text: 'Competitive minimum order quantity with stable production capacity.',
-  },
-]
+const icons = [Tag, Package, PenTool, Boxes]
 
-export function OemOdm() {
+export function OemOdm({ content }: { content: HomepageOem }) {
   return (
     <section
       id="oem-odm"
@@ -36,22 +15,16 @@ export function OemOdm() {
         {/* Image */}
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl sm:aspect-[4/3] lg:aspect-[4/5]">
 
-          <Image
-            src="/images/oem.png"
-            alt="Custom branded dog toy packaging and design samples"
-            fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
+          <img src={content.image} alt={content.title} className="size-full object-cover" />
 
           <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/90 p-5 backdrop-blur sm:right-auto">
 
             <p className="font-heading text-3xl font-extrabold text-primary">
-              500+
+              {content.statValue}
             </p>
 
             <p className="text-sm font-medium text-navy">
-              OEM Projects Completed
+              {content.statLabel}
             </p>
 
           </div>
@@ -64,18 +37,20 @@ export function OemOdm() {
 
           <SectionHeading
             align="left"
-            eyebrow="OEM & ODM"
-            title="Professional OEM & ODM Dog Toy Manufacturing"
-            description="We provide one-stop OEM & ODM services including product development, custom logo, packaging design, sampling, manufacturing and worldwide export."
+            eyebrow={content.eyebrow}
+            title={content.title}
+            description={content.description}
           />
 
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
 
-            {services.map(({ icon: Icon, title, text }) => (
+            {content.services.map(({ title, text }, index) => {
+              const Icon = icons[index % icons.length]
+              return (
 
               <div
-                key={title}
+                key={`${title}-${index}`}
                 className="rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
               >
 
@@ -97,7 +72,8 @@ export function OemOdm() {
 
               </div>
 
-            ))}
+              )
+            })}
 
           </div>
 
@@ -106,7 +82,7 @@ export function OemOdm() {
             href="#contact"
             className="mt-10 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/25"
           >
-            Request OEM Quote
+            {content.cta}
           </a>
 
 

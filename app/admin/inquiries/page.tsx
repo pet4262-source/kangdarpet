@@ -1,0 +1,12 @@
+import { Mail, MessageSquare, PackageSearch } from 'lucide-react'
+import { AdminShell } from '@/components/admin/admin-shell'
+import { requireAdminPage } from '@/lib/admin-auth'
+import { listInquiries } from '@/lib/inquiry-store'
+
+export const dynamic = 'force-dynamic'
+
+export default async function InquiriesPage() {
+  await requireAdminPage()
+  const { inquiries, readOnly } = await listInquiries()
+  return <AdminShell active="/admin/inquiries"><div><p className="text-sm font-semibold text-[#e85d00]">Buyer leads</p><h1 className="mt-1 text-3xl font-bold tracking-tight">Product inquiries</h1><p className="mt-2 text-sm text-slate-500">Messages submitted from individual product detail pages. No customer details are exposed on public routes.</p></div>{readOnly && <p className="mt-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">Inquiry storage is unavailable or not configured. New inquiries cannot be saved in seed mode.</p>}<div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white">{inquiries.length === 0 ? <div className="p-12 text-center"><MessageSquare className="mx-auto size-8 text-slate-300" /><h2 className="mt-3 font-bold text-slate-700">No inquiries yet</h2><p className="mt-1 text-sm text-slate-500">New product-page inquiries will appear here.</p></div> : <div className="divide-y divide-slate-100">{inquiries.map((inquiry) => <article key={inquiry.id} className="p-5"><div className="flex flex-col justify-between gap-2 sm:flex-row"><div><p className="font-bold text-slate-900">{inquiry.name}{inquiry.company ? <span className="font-normal text-slate-500"> · {inquiry.company}</span> : null}</p><a href={`mailto:${inquiry.email}`} className="mt-1 inline-flex items-center gap-1 text-sm font-medium text-[#e85d00]"><Mail className="size-3.5" />{inquiry.email}</a></div><time className="text-xs text-slate-400">{new Date(inquiry.createdAt).toLocaleString()}</time></div><div className="mt-4 inline-flex items-center gap-2 rounded-md bg-slate-50 px-2.5 py-1.5 text-xs font-semibold text-slate-600"><PackageSearch className="size-3.5 text-[#ff6a00]" />{inquiry.productName}</div><p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-slate-600">{inquiry.message}</p><p className="mt-3 text-xs text-slate-400">{[inquiry.phone, inquiry.country].filter(Boolean).join(' · ') || 'No phone or country supplied'}</p></article>)}</div>}</div></AdminShell>
+}

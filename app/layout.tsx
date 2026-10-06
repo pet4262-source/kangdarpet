@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.kangdarpet.com'),
   title: 'KANGDARPET | Premium Dog Toys Manufacturer in China – OEM & ODM',
   description:
     'KANGDARPET is a factory-direct dog toy manufacturer in China offering OEM & ODM plush, rubber, rope, interactive, puppy and tough chew toys for global pet brands.',
@@ -26,8 +27,10 @@ export const metadata: Metadata = {
     title: 'KANGDARPET | Premium Dog Toys Manufacturer in China',
     description: 'OEM & ODM Dog Toy Solutions for Global Brands.',
     type: 'website',
+    siteName: 'KANGDARPET',
     images: ['/images/hero.png'],
   },
+  twitter: { card: 'summary_large_image', images: ['/images/hero.png'] },
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#1d4ed8',
+  themeColor: '#ff6a00',
 }
 
 export default function RootLayout({

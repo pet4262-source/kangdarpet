@@ -1,14 +1,7 @@
-import Image from 'next/image'
 import { SectionHeading } from './section-heading'
+import type { HomepageFactory } from '@/lib/homepage-types'
 
-const stats = [
-  { value: '12+', label: 'Years Experience' },
-  { value: '4800㎡', label: 'Factory Area' },
-  { value: '50+', label: 'Skilled Workers' },
-  { value: '30+', label: 'Export Countries' },
-]
-
-export function FactorySection() {
+export function FactorySection({ content }: { content: HomepageFactory }) {
   return (
     <section id="factory" className="px-3 lg:px-5">
       <div className="overflow-hidden rounded-3xl bg-navy">
@@ -16,25 +9,19 @@ export function FactorySection() {
 
           <SectionHeading
             invert
-            eyebrow="Factory Overview"
-            title="Professional Dog Toy Manufacturing Factory"
-            description="Since 2012, KANGDARPET has specialized in manufacturing high-quality dog toys with advanced equipment, strict quality control and reliable worldwide delivery."
+            eyebrow={content.eyebrow}
+            title={content.title}
+            description={content.description}
           />
 
           <div className="relative mt-14 aspect-[16/7] overflow-hidden rounded-3xl">
-            <Image
-              src="/images/factory.png"
-              alt="KANGDARPET dog toy production floor with workers"
-              fill
-              sizes="(min-width: 1280px) 1216px, 100vw"
-              className="object-cover"
-            />
+            <img src={content.image} alt={content.title} className="size-full object-cover" />
           </div>
 
           <dl className="mt-10 grid grid-cols-2 gap-5 lg:grid-cols-4">
-            {stats.map((stat) => (
+            {content.stats.map((stat, index) => (
               <div
-                key={stat.label}
+                key={`${stat.label}-${index}`}
                 className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
               >
                 <dt className="sr-only">
