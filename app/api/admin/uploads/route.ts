@@ -7,14 +7,20 @@ export const dynamic = 'force-dynamic'
 
 const MAX_BYTES = 6 * 1024 * 1024
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/avif']
-const IMAGE_PREFIX = process.env.VERCEL_ENV === 'production'
-  ? 'kangdarpet/product-images'
-  : 'kangdarpet/preview/product-images'
-const IMAGE_PATH = new RegExp(`^${IMAGE_PREFIX}/[0-9a-f-]{36}\\.(jpg|png|webp|avif)$`)
+const DATA_ROOT = process.env.VERCEL_ENV === 'production' ? 'kangdarpet' : 'kangdarpet/preview'
+const PRODUCT_IMAGE_PREFIX = `${DATA_ROOT}/product-images/`
+const HOMEPAGE_IMAGE_PREFIX = `${DATA_ROOT}/homepage-images/`
+const UUID = '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+const IMAGE_PATH = new RegExp(`^${DATA_ROOT}/(?:product-images|homepage-images)/${UUID}\\.(jpg|png|webp|avif)$`)
 
-export async function GET() {
+export async function GET(request: Request) {
   if (!(await isAdmin())) return NextResponse.json({ error: 'Authentication required.' }, { status: 401 })
-  return NextResponse.json({ prefix: `${IMAGE_PREFIX}/` }, { headers: { 'Cache-Control': 'no-store' } })
+  const kind = new URL(request.url).searchParams.get('kind')
+  if (kind && kind !== 'homepage') return NextResponse.json({ error: 'Invalid image kind.' }, { status: 400 })
+  return NextResponse.json(
+    { prefix: kind === 'homepage' ? HOMEPAGE_IMAGE_PREFIX : PRODUCT_IMAGE_PREFIX },
+    { headers: { 'Cache-Control': 'no-store' } },
+  )
 }
 
 export async function POST(request: Request) {
@@ -35,7 +41,7 @@ export async function POST(request: Request) {
       onBeforeGenerateToken: async (pathname) => {
         if (!requireSameOrigin(request)) throw new Error('Cross-site upload token requests are not allowed.')
         if (!(await isAdmin())) throw new Error('Authentication required.')
-        if (!IMAGE_PATH.test(pathname)) throw new Error('Invalid product image path.')
+        if (!IMAGE_PATH.test(pathname)) throw new Error('Invalid image path.')
         return {
           allowedContentTypes: ALLOWED_TYPES,
           maximumSizeInBytes: MAX_BYTES,

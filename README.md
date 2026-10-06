@@ -8,7 +8,7 @@ A **B2B-only** Next.js product console for www.kangdarpet.com. It manages a sync
 - **Draft / Published** state. Published products are read dynamically by `/products` and `/products/[slug]`; drafts are completely omitted from public catalog responses and pages.
 - 48 products and 6 categories are initialized from `data/homepage-baseline.json` (`catalog.items` and `products.items`). The seed is never reduced to the older one-product repository data.
 - Vercel Blob persistence: every catalog save writes a unique immutable JSON version under `kangdarpet/catalog/versions/` in production, or `kangdarpet/preview/catalog/versions/` in preview/local. Reads list and fetch the newest version with `no-store`. Revision locks and expected revisions return a conflict rather than silently overwriting another editor.
-- Admin-authorized browser-to-Blob image upload, MIME/6 MB validation, and immutable Blob image paths; the file does not pass through a size-limited Vercel Function.
+- Admin-authorized browser-to-Blob product and homepage image upload, MIME/6 MB validation, and immutable Blob image paths; the file does not pass through a size-limited Vercel Function.
 - Homepage CMS at `/admin/homepage`: server-authorized public content editing for all homepage sections, including six category cards and their multi-image/video media. It writes homepage-only content and deliberately never reads or saves the B2B product catalog.
 - Product-page inquiry forms with server-side input validation, timing/honeypot anti-spam checks and a non-reversible IP fingerprint. Buyer records are AES-GCM encrypted before Blob persistence and are visible only through `/admin/inquiries`.
 - Password login backed by `ADMIN_PASSWORD`, timing-safe server comparison, and signed `HttpOnly` cookies. There is no browser password, `localStorage` admin flag, or static admin token.
@@ -42,9 +42,16 @@ npm run build
 
 The preview route declaration is `public/manus-routes.json`.
 
+## Change homepage images from your computer
+
+1. Sign in at `/admin/login` and open **Homepage CMS** (`/admin/homepage`).
+2. Choose **Hero 主视觉** for the main banner, **产品分类与媒体** for category covers or extra images, or the **OEM & ODM**, **工厂数据**, or **关于我们** section for those pictures.
+3. Select a JPEG, PNG, WebP or AVIF file under 6 MB with the adjacent **从电脑上传** control. The uploaded image URL and preview appear in the editor; the public homepage has **not** changed yet.
+4. Click **保存首页** to publish the new image, then use **查看首页** to confirm. Uploading a file without saving the homepage leaves the current public image untouched.
+
 ## Operations / migration notes
 
-1. Deploying this branch for the first time with Blob configured reads the environment-specific catalog prefix. If it is empty, it serves the latest checked-in baseline; the first catalog save creates the initial persistent version. Preview/local catalog, inquiry, inquiry-rate-limit, and image-upload paths have separate prefixes and cannot appear in production. Administrator clients obtain the current image prefix from authenticated `GET /api/admin/uploads` before requesting an upload token.
+1. Deploying this branch for the first time with Blob configured reads the environment-specific catalog prefix. If it is empty, it serves the latest checked-in baseline; the first catalog save creates the initial persistent version. Preview/local catalog, inquiry, inquiry-rate-limit, product-image, and homepage-image paths have separate prefixes and cannot appear in production. Administrator clients obtain the product prefix from authenticated `GET /api/admin/uploads` or the homepage prefix from `GET /api/admin/uploads?kind=homepage` before requesting an upload token.
 2. Homepage CMS production content uses immutable `cms/homepage-<timestamp>-<uuid>.json` versions. With `VERCEL_ENV=production`, reads and writes use that live prefix. In preview/local, reads prioritize `cms-preview/homepage-*`, then may show the newest production version as an initial display; **all preview/local saves write only `cms-preview/homepage-*`**. This is intentional because the same Blob token may be configured for production and preview.
 3. With no `BLOB_READ_WRITE_TOKEN`, homepage CMS is explicitly read-only and serves `data/homepage-baseline.json`; it never reports a successful save. Blob versions use the Vercel-supported minimum cache lifetime (60 seconds), while application reads fetch the selected immutable URL with `no-store`.
 4. Before production deployment, verify the protected preview, all 48 product image paths, homepage category media, and the original admin login. Preview edits are isolated; production still requires its own final verification.
@@ -59,4 +66,4 @@ The preview route declaration is `public/manus-routes.json`.
 - Inquiry encryption is AES-256-GCM using only `INQUIRY_ENCRYPTION_KEY`, never `ADMIN_PASSWORD`; the encrypted envelope carries an encryption version and key ID. The independent key is mandatory for inquiry persistence and administrative reads.
 - Public catalog API sends only published products.
 - Inquiry API does not return inquiries or administrator details.
-- Uploaded media is public product imagery by design. Do not upload buyer files, contracts, or secrets.
+- Uploaded media is public product/homepage imagery by design. Do not upload buyer files, contracts, or secrets.
